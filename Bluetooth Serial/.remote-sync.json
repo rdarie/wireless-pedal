@@ -1,0 +1,16 @@
+{
+  "uploadOnSave": true,
+  "useAtomicWrites": true,
+  "deleteLocal": false,
+  "hostname": "raduberrypi.local",
+  "port": "22",
+  "target": "/home/pi/Research/Bluetooth/",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "pi",
+  "password": "monkeybusiness",
+  "watch": [],
+  "transport": "scp"
+}
