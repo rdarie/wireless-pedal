@@ -42,7 +42,7 @@ void loop() {
   BLESerial.poll();
 
   forward();
-  // loopback();
+  loopback();
   spam();
 }
 
@@ -69,6 +69,6 @@ void spam() {
   if (BLESerial) {
     BLESerial.print(millis());
     BLESerial.println(" tick-tacks!");
-    delay(1000);
+    delay(5000);
   }
 }

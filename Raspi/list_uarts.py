@@ -50,7 +50,6 @@ def main():
         # Sleep for a second and see if new devices have appeared.
         time.sleep(1.0)
 
-
 # Initialize the BLE system.  MUST be called before other BLE calls!
 ble.initialize()
 
