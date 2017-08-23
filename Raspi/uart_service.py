@@ -7,6 +7,7 @@ from Adafruit_BluefruitLE.services import UART
 # Get the BLE provider for the current platform.
 ble = Adafruit_BluefruitLE.get_provider()
 
+
 # Main function implements the program logic so it can run in a background
 # thread.  Most platforms require the main thread to handle GUI events and other
 # asyncronous events like BLE actions.  All of the threading logic is taken care
