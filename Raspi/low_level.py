@@ -7,7 +7,7 @@
 import logging
 import time
 import uuid
-
+import pdb
 import Adafruit_BluefruitLE
 
 
@@ -89,6 +89,7 @@ def main():
         # the function changes is thread safe.  Use queue or other thread-safe
         # primitives to send data to other threads.
         def received(data):
+            #pdb.set_trace()
             print('Received: {0}'.format(data))
 
         # Turn on notification of RX characteristics using the callback above.
