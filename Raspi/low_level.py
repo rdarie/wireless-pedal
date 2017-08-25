@@ -90,7 +90,7 @@ def main():
         # primitives to send data to other threads.
         def received(data):
             pdb.set_trace()
-            print('Received: {0}'.format(data))
+            print('Received: {0}'.format(ord(data)))
 
         # Turn on notification of RX characteristics using the callback above.
         print('Subscribing to RX characteristic changes...')
