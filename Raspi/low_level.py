@@ -80,9 +80,9 @@ def main():
 
         # Write a string to the TX characteristic.
         print('Actuating vibromotor...')
-        motorState.write_value(0x01)
+        motorState.write_value('0x01')
         time.sleep(2)
-        motorState.write_value(0x00)
+        motorState.write_value('0x00')
 
         # Function to receive RX characteristic changes.  Note that this will
         # be called on a different thread so be careful to make sure state that
