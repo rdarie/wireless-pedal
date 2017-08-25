@@ -44,7 +44,7 @@ def main():
     # Disconnect any currently connected UART devices.  Good for cleaning up and
     # starting from a fresh state.
     print('Disconnecting any connected UART devices...')
-    ble.disconnect_devices([UART_SERVICE_UUID])
+    ble.disconnect_devices([TOUCH_SERVICE_UUID, MOTOR_SERVICE_UUID])
 
     # Scan for UART devices.
     print('Searching for UART device...')
@@ -70,27 +70,27 @@ def main():
         # service and characteristic UUID lists.  Will time out after 60 seconds
         # (specify timeout_sec parameter to override).
         print('Discovering services...')
-        device.discover([UART_SERVICE_UUID], [TX_CHAR_UUID, RX_CHAR_UUID])
+        device.discover([TOUCH_SERVICE_UUID, MOTOR_SERVICE_UUID], [TOUCH_STATE_CHARACTERISTIC_UUID, MOTOR_STATE_CHARACTERISTIC_UUID])
 
         # Find the UART service and its characteristics.
-        uart = device.find_service(UART_SERVICE_UUID)
-        rx = uart.find_characteristic(RX_CHAR_UUID)
-        tx = uart.find_characteristic(TX_CHAR_UUID)
+        #uart = device.find_service(UART_SERVICE_UUID)
+        #rx = uart.find_characteristic(RX_CHAR_UUID)
+        #tx = uart.find_characteristic(TX_CHAR_UUID)
 
         # Write a string to the TX characteristic.
         print('Sending message to device...')
-        tx.write_value('Hello world!\r\n')
+        #tx.write_value('Hello world!\r\n')
 
         # Function to receive RX characteristic changes.  Note that this will
         # be called on a different thread so be careful to make sure state that
         # the function changes is thread safe.  Use queue or other thread-safe
         # primitives to send data to other threads.
-        def received(data):
-            print('Received: {0}'.format(data))
+        #def received(data):
+        #    print('Received: {0}'.format(data))
 
         # Turn on notification of RX characteristics using the callback above.
-        print('Subscribing to RX characteristic changes...')
-        rx.start_notify(received)
+        #print('Subscribing to RX characteristic changes...')
+        #rx.start_notify(received)
 
         # Now just wait for 30 seconds to receive data.
         print('Waiting 60 seconds to receive data from the device...')
