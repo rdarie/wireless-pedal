@@ -80,9 +80,9 @@ def main():
 
         # Write a string to the TX characteristic.
         print('Actuating vibromotor...')
-        motor.write_value(0x01)
+        motorState.write_value(0x01)
         time.sleep(2)
-        motor.write_value(0x00)
+        motorState.write_value(0x00)
 
         # Function to receive RX characteristic changes.  Note that this will
         # be called on a different thread so be careful to make sure state that
@@ -93,7 +93,7 @@ def main():
 
         # Turn on notification of RX characteristics using the callback above.
         print('Subscribing to RX characteristic changes...')
-        touch.start_notify(received)
+        touchState.start_notify(received)
 
         # Now just wait for 30 seconds to receive data.
         print('Waiting 60 seconds to receive data from the device...')
