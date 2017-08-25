@@ -22,7 +22,7 @@
 
 #define MIN_CONN_INTERVAL 3 // milliseconds
 #define MAX_CONN_INTERVAL 5 // milliseconds
-#define MIN_TOUCH_DURATION 20 // microseconds
+#define MIN_TOUCH_DURATION 16 // microseconds
 DigitalOut alivenessLED(p7, 0);
 DigitalOut motor(p25, 0);
 
