@@ -75,7 +75,7 @@ def main():
         # Find the Touch sensor service and its characteristics.
         touch = device.find_service(TOUCH_SERVICE_UUID)
         touchState = touch.find_characteristic(MOTOR_SERVICE_UUID)
-        motor = device.find_service(TOUCH_STATE_CHARACTERISTIC_UUID)
+        motor = device.find_service(MOTOR_STATE_CHARACTERISTIC_UUID)
         motorState = motor.find_characteristic(MOTOR_STATE_CHARACTERISTIC_UUID)
 
         # Write a string to the TX characteristic.
