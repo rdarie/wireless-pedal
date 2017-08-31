@@ -22,11 +22,13 @@
 
 #define MIN_CONN_INTERVAL 3 // milliseconds
 #define MAX_CONN_INTERVAL 5 // milliseconds
-#define MIN_TOUCH_DURATION 16 // microseconds
-DigitalOut alivenessLED(p7, 0);
-DigitalOut motor(p25, 0);
+#define SLAVE_LATENCY 1
 
-InterruptIn touch(p15);
+#define MIN_TOUCH_DURATION 16 // microseconds
+DigitalOut alivenessLED(P0_7, 1);
+DigitalOut motor(p30, 0);
+
+InterruptIn touch(p29);
 
 const static char     DEVICE_NAME[] = "SmartPedal";
 static const uint16_t uuid16_list[] = {TouchService::TOUCH_SERVICE_UUID, MotorService::MOTOR_SERVICE_UUID};
@@ -125,7 +127,7 @@ void scheduleBleEventsProcessing(BLE::OnEventsToProcessCallbackContext* context)
 int main()
 {
     touch.mode(PullDown);
-    //eventQueue.call_every(500, blinkCallback);
+    eventQueue.call_every(500, blinkCallback);
 
     BLE &ble = BLE::Instance();
     ble.onEventsToProcess(scheduleBleEventsProcessing);
