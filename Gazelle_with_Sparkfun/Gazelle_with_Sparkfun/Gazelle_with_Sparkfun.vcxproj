@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{4262FE81-B181-4B96-9808-10E58B7EE42E}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="VisualGDBPackageDefinitions">
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>7.2.0/8.0.1/r2</ToolchainVersion>
+    <BSP_ID>com.sysprogs.arm.nordic.nrf5x</BSP_ID>
+    <BSP_VERSION>14.0</BSP_VERSION>
+  </PropertyGroup>
+  <ImportGroup Label="VisualGDBFindComponents">
+    <Import Project="$(LOCALAPPDATA)\VisualGDB\FindComponents.props" />
+  </ImportGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeIncludeSearchPath>.;$(BSP_ROOT)\nRF5x\components\toolchain;$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include;$(BSP_ROOT)\nRF5x\components\device;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\7.2.0;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\7.2.0\arm-eabi\thumb\fpu\cortex_m4;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\7.2.0\backward;$(TOOLCHAIN_ROOT)\lib\gcc\arm-eabi\7.2.0\include;$(TOOLCHAIN_ROOT)\lib\gcc\arm-eabi\7.2.0\include-fixed;$(TOOLCHAIN_ROOT)\arm-eabi\sys-include;$(TOOLCHAIN_ROOT)\arm-eabi\include;$(BSP_ROOT)\nRF5x\components\libraries\balloc;$(BSP_ROOT)\nRF5x\components\libraries\bsp;$(BSP_ROOT)\nRF5x\components\libraries\button;$(BSP_ROOT)\nRF5x\components\libraries\experimental_log;$(BSP_ROOT)\nRF5x\components\libraries\experimental_memobj;$(BSP_ROOT)\nRF5x\components\libraries\experimental_section_vars;$(BSP_ROOT)\nRF5x\components\proprietary_rf\gzll;pca10040\blank\config;$(BSP_ROOT)\nRF5x\components\boards;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes>$(ProjectDir)\gcc_Debug.h;$(VISUALGDB_DIR)\gcc_compat.h;$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /build "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /clean "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /rebuild "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeReBuildCommandLine>
+    <NMakeOutput>$(ProjectDir)Gazelle_with_Sparkfun-Debug.vgdbsettings</NMakeOutput>
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <NMakePreprocessorDefinitions>__VisualGDB_CFG_Debug;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeIncludeSearchPath>.;$(BSP_ROOT)\nRF5x\components\toolchain;$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include;$(BSP_ROOT)\nRF5x\components\device;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\7.2.0;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\7.2.0\arm-eabi\thumb\fpu\cortex_m4;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\7.2.0\backward;$(TOOLCHAIN_ROOT)\lib\gcc\arm-eabi\7.2.0\include;$(TOOLCHAIN_ROOT)\lib\gcc\arm-eabi\7.2.0\include-fixed;$(TOOLCHAIN_ROOT)\arm-eabi\sys-include;$(TOOLCHAIN_ROOT)\arm-eabi\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes>$(ProjectDir)\gcc_Release.h;$(VISUALGDB_DIR)\gcc_compat.h;$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakePreprocessorDefinitions>__VisualGDB_CFG_Release;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /build "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /clean "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /rebuild "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeReBuildCommandLine>
+    <NMakeOutput>$(ProjectDir)Gazelle_with_Sparkfun-Release.vgdbsettings</NMakeOutput>
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ClCompile Include="main.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\experimental_log\src\nrf_log_backend_rtt.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\experimental_log\src\nrf_log_backend_serial.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\experimental_log\src\nrf_log_backend_uart.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\experimental_log\src\nrf_log_default_backends.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\experimental_log\src\nrf_log_frontend.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\experimental_log\src\nrf_log_str_formatter.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\boards\boards.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\button\app_button.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\util\app_error.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\util\app_error_weak.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\scheduler\app_scheduler.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\timer\app_timer.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\util\app_util_platform.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\util\nrf_assert.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\balloc\nrf_balloc.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\external\fprintf\nrf_fprintf.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\external\fprintf\nrf_fprintf_format.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\experimental_memobj\nrf_memobj.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\strerror\nrf_strerror.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\drivers_nrf\common\nrf_drv_common.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\drivers_nrf\gpiote\nrf_drv_gpiote.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\drivers_nrf\uart\nrf_drv_uart.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\bsp\bsp.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\bsp\bsp_nfc.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\external\segger_rtt\RTT_Syscalls_GCC.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\external\segger_rtt\SEGGER_RTT.c" />
+    <ClCompile Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\external\segger_rtt\SEGGER_RTT_printf.c" />
+    <Library Include="..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\proprietary_rf\gzll\gcc\gzll_nrf52_sd_resources_gcc.a" />
+    <None Include="nrf5x.mak" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\toolchain\system_nrf52.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\toolchain\gcc\gcc_startup_nrf52.S" />
+    <ClInclude Include="local_sparkfun.h" />
+    <ClInclude Include="pca10040\blank\config\sdk_config.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\system_nrf51.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\system_nrf52.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\system_nrf52810.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\system_nrf52840.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\arm_common_tables.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\arm_const_structs.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\arm_math.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\cmsis_armcc.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\cmsis_armcc_V6.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\cmsis_gcc.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_cm0.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_cm0plus.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_cm3.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_cm4.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_cm7.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_cmFunc.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_cmInstr.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_cmSimd.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_sc000.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_sc300.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\compiler_abstraction.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf51.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf51422_peripherals.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf51802_peripherals.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf51822_peripherals.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf51_bitfields.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf51_deprecated.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf51_to_nrf52.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf51_to_nrf52810.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf51_to_nrf52840.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf52.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf52810.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf52810_bitfields.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf52810_peripherals.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf52832_peripherals.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf52840.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf52840_bitfields.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf52840_peripherals.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf52_bitfields.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf52_name_change.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf52_to_nrf52810.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\device\nrf52_to_nrf52840.h" />
+    <None Include="Makefile" />
+    <None Include="debug.mak" />
+    <None Include="release.mak" />
+    <None Include="Gazelle_with_Sparkfun-Debug.vgdbsettings" />
+    <None Include="Gazelle_with_Sparkfun-Release.vgdbsettings" />
+    <None Include="nrf5x.xml" />
+  </ItemGroup>
+</Project>
