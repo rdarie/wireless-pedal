@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <events/mbed_events.h>
+#include <mbed_events.h>
 #include <mbed.h>
 #include "ble/BLE.h"
 #include "touchService.h"
@@ -25,10 +25,10 @@
 #define SLAVE_LATENCY 1
 
 #define MIN_TOUCH_DURATION 16 // microseconds
-DigitalOut alivenessLED(P0_7, 1);
-DigitalOut motor(p30, 0);
+DigitalOut alivenessLED(P0_11, 1);
+DigitalOut motor(P0_28, 0);
 
-InterruptIn touch(p29);
+InterruptIn touch(P0_4);
 
 const static char     DEVICE_NAME[] = "SmartPedal";
 static const uint16_t uuid16_list[] = {TouchService::TOUCH_SERVICE_UUID, MotorService::MOTOR_SERVICE_UUID};

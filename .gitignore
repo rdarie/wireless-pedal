@@ -50,3 +50,19 @@ Temporary Items
 .vs/
 CodeDB/
 Debug/
+
+# Eagle
+
+*.job
+
+*.zip
+
+*.s#*
+
+*.b#*
+
+*.lck
+
+*.pdf
+
+*.epf

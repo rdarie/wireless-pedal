@@ -161,21 +161,21 @@
 <library name="radu-eagle-lib">
 <packages>
 <package name="UDFN8">
+<wire x1="-1" y1="-1" x2="-1" y2="1" width="0.127" layer="51"/>
 <wire x1="-1" y1="1" x2="1" y2="1" width="0.127" layer="51"/>
 <wire x1="1" y1="1" x2="1" y2="-1" width="0.127" layer="51"/>
 <wire x1="1" y1="-1" x2="-1" y2="-1" width="0.127" layer="51"/>
-<wire x1="-1" y1="-1" x2="-1" y2="1" width="0.127" layer="51"/>
-<wire x1="-1.1" y1="0.5" x2="-1.1" y2="-0.75" width="0.2032" layer="21"/>
-<wire x1="1.1" y1="-0.75" x2="1.1" y2="0.75" width="0.2032" layer="21"/>
-<wire x1="-1.1" y1="0.75" x2="-1.1" y2="1" width="0.2032" layer="21"/>
-<smd name="1" x="-0.75" y="0.75" dx="0.45" dy="0.25" layer="1" roundness="30" rot="R270"/>
-<smd name="2" x="-0.25" y="0.75" dx="0.45" dy="0.25" layer="1" rot="R90"/>
-<smd name="3" x="0.25" y="0.75" dx="0.45" dy="0.25" layer="1" rot="R90"/>
-<smd name="4" x="0.75" y="0.75" dx="0.45" dy="0.25" layer="1" rot="R90"/>
-<smd name="5" x="0.75" y="-0.75" dx="0.45" dy="0.25" layer="1" rot="R90"/>
-<smd name="6" x="0.25" y="-0.75" dx="0.45" dy="0.25" layer="1" rot="R90"/>
-<smd name="7" x="-0.25" y="-0.75" dx="0.45" dy="0.25" layer="1" rot="R90"/>
-<smd name="8" x="-0.75" y="-0.75" dx="0.45" dy="0.25" layer="1" rot="R90"/>
+<wire x1="-0.5" y1="-1.1" x2="0.75" y2="-1.1" width="0.2032" layer="21"/>
+<wire x1="0.75" y1="1.1" x2="-0.75" y2="1.1" width="0.2032" layer="21"/>
+<wire x1="-0.75" y1="-1.1" x2="-1" y2="-1.1" width="0.2032" layer="21"/>
+<smd name="4" x="-0.75" y="-0.75" dx="0.45" dy="0.25" layer="1" roundness="30"/>
+<smd name="3" x="-0.75" y="-0.25" dx="0.45" dy="0.25" layer="1" rot="R180"/>
+<smd name="2" x="-0.75" y="0.25" dx="0.45" dy="0.25" layer="1" rot="R180"/>
+<smd name="1" x="-0.75" y="0.75" dx="0.45" dy="0.25" layer="1" rot="R180"/>
+<smd name="8" x="0.75" y="0.75" dx="0.45" dy="0.25" layer="1" rot="R180"/>
+<smd name="7" x="0.75" y="0.25" dx="0.45" dy="0.25" layer="1" rot="R180"/>
+<smd name="6" x="0.75" y="-0.25" dx="0.45" dy="0.25" layer="1" rot="R180"/>
+<smd name="5" x="0.75" y="-0.75" dx="0.45" dy="0.25" layer="1" rot="R180"/>
 <text x="-2.54" y="2.54" size="1.27" layer="25">&gt;NAME</text>
 <text x="-2.54" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
 </package>
@@ -201,7 +201,6 @@
 <wire x1="-1.537" y1="16.619" x2="-0.081" y2="18.206" width="0.001" layer="51" curve="-90"/>
 <wire x1="-0.081" y1="18.206" x2="15.317" y2="18.206" width="0.001" layer="51"/>
 <wire x1="15.317" y1="18.206" x2="16.883" y2="16.735" width="0.001" layer="51" curve="-89.9"/>
-<wire x1="-53.465" y1="-2.49" x2="-53.415" y2="-2.49" width="0.001" layer="20"/>
 <text x="13.13" y="11.62" size="0.8128" layer="26" font="vector" rot="MR90">DCLK</text>
 <text x="13.11" y="9.17" size="0.8128" layer="26" font="vector" rot="MR90">DIO</text>
 <text x="13.06" y="6.61" size="0.8128" layer="26" font="vector" rot="MR90">P05</text>
@@ -3195,6 +3194,7 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <segment>
 <pinref part="U$2" gate="G$1" pin="VIN"/>
 <wire x1="38.1" y1="-55.88" x2="48.26" y2="-55.88" width="0.1524" layer="91"/>
+<label x="48.26" y="-58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="OUT" class="0">
